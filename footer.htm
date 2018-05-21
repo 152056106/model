@@ -1,0 +1,20 @@
+<footer>
+	<div class="container text-center">
+		<p>网站版权所有 ©太原工业学院所有2018  保留一切权利。 </p>
+		<p>地址：山西省太原市尖草坪区太原工业学院</p>
+                 <p>友情链接 <a href="http://www.tit.edu.cn">官方网站</a></p>
+	</div>
+</footer>
+<button type="button" class="btn btn-icon ms-btn-fff btn-squared met-scroll-top hide"><i class="iconfont" aria-hidden="true">&#xe750;</i></button>
+<script src="{ms:globalskin.url/}js/metinfo.js"></script>
+<script type="text/javascript">
+	var id = location.search;
+	if(id != "") {
+		if(id.length > 5) {
+			id = id.substr(4, id.length - 11);
+		} else {
+			id = id.substr(4, id.length);
+		}
+		$(".nav-li>a").eq(parseInt(id - 1)).addClass("active");
+	}
+</script>

@@ -1,0 +1,57 @@
+html {
+	display: table;
+	margin: 0 auto;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	height: 635px;
+	width: 100%;
+	font-size: 20px;
+	align-content: center;
+}
+
+.body {
+	width: 1000px;
+	height: 95%;
+	align-content: center;
+}
+
+.body_left {
+	float: left;
+	width: 82%;
+	height: 96.5%;
+	position:relative;
+}
+
+.body_left_map{
+	width:100%;
+	height: 100%;
+	position: absolute;
+	left: 8%;
+	top: 0%;
+}
+
+.body_left_Logo{
+	width:15%;
+	height:21%;
+	position: absolute;
+	left: 5%;
+	top: 7%;
+}
+
+.body_right {
+	float: left;
+	width: 18%;
+	height: 85%;
+	text-align: center;
+}
+
+.nav ul li ul {
+	font-size: 15px;
+	text-align: center;
+}

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="{ms:globalskin.url/}css/css/base.css" />
+	<link rel="stylesheet" type="text/css" href="{ms:globalskin.url/}css/css/nav.css">
+
+	<script type="text/javascript" src="{ms:globalskin.url/}js/js/jquery.min.js"></script>
+	<script type="text/javascript" src="{ms:globalskin.url/}js/js/nav.js"></script>
+	<script src="{ms:globalskin.url/}js/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="{ms:globalskin.url/}js/js/echarts.min.js"></script>
+	<script type="text/javascript" src="{ms:globalskin.url/}js/js/china.js"></script>
+	</head>	
+
+	<body>
+		<div class="body" name="body" id="body">
+			<div class="body_left">
+				<div class="body_left_Logo">
+					<img src="{ms:globalskin.url/}images/TitLogo.png" alt="" style="width:100%;height: 100%">
+				</div>
+				<div  class = "body_left_map"id = "map"></div>
+			</div>
+			<div class="body_right">
+				<div class="body_right_top">
+					<div class="body_right_top_content">
+						<span>欢迎回家</span>
+						<div>
+							<a href="">登录</a>
+							<a href="">注册</a>
+						</div>
+					</div>
+				</div>
+				<div class="nav">
+					<ul>
+						<li class="nav-item">
+							<a href="javascript:;"><span>&nbsp;首页</span></a>
+						</li>
+						<li class="nav-item">
+							<a href="javascript:;"><span>新闻中心</span></a>
+							<ul>
+								<li>
+									<a href="{ms:global.url/}/149/150/index.html"><span>校友总会新闻</span></a>
+								</li>
+								<li>
+									<a href="{ms:global.url/}/149/151/index.html"><span>地方、各系新闻</span></a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="javascript:;"><span>校友组织</span></a>
+							<ul>
+								<li>
+									<a href="{ms:global.url/}/152/153/index.html"><span>校友总会</span></a>
+								</li>
+								<li>
+									<a href="{ms:global.url/}/152/181/index.html"><span>各系校友分会</span></a>
+								</li>
+								<li>
+									<a href="{ms:global.url/}/152/154/index.html"><span>各地校友分会</span></a>
+								</li>
+								<li>
+									<a href="{ms:global.url/}/152/155/index.html"><span>特色分会</span></a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="javascript:;"><span>校友活动</span></a>
+							<ul>
+								<li>
+									<a href="{ms:global.url/}/167/168/index.html"><span>活动发布</span></a>
+								</li>
+								<li>
+									<a href="{ms:global.url/}/167/169/index.html"><span>活动掠影</span></a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="javascript:;"><span>校友风采</span></a>
+							<ul>
+								<li>
+									<a href="{ms:global.url/}/170/171/index.html"><span>杰出校友</span></a>
+								</li>
+								<li>
+									<a href="{ms:global.url/}/170/172/index.html"><span>学子风采</span></a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="javascript:;"><span>校友捐赠</span></a>
+							<ul>
+								<li>
+									<a href="{ms:global.url/}/173/174/index.html"><span>捐赠项目</span></a>
+								</li>
+								<li>
+									<a href="{ms:global.url/}/173/175/index.html"><span>捐赠方式</span></a>
+								</li>
+								<li>
+									<a href="{ms:global.url/}/173/176/index.html"><span>捐赠鸣谢</span></a>
+								</li>
+								<li>
+									<a href="{ms:global.url/}/173/177/index.html"><span>捐赠感言</span></a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="javascript:;"><span>为您服务</span></a>
+							<ul>
+								<li>
+									<a href="{ms:global.url/}/182/183/index.html"><span>校园活动与讲座信息</span></a>
+								</li>
+								<li>
+									<a href="{ms:global.url/}/182/184/index.html"><span>校友生活服务</span></a>
+								</li>
+								<li>
+									<a href="{ms:global.url/}/182/185/index.html"><span>进修培训服务</span></a>
+								</li>
+								<li>
+									<a href="{ms:global.url/}/182/186/index.html"><span>经典下载</span></a>
+								</li>
+								<li>
+									<a href="{ms:global.url/}/182/187/index.html"><span>校友企业</span></a>
+								</li>
+								<li>
+									<a href="{ms:global.url/}/182/188/index.html"><span>母校文化产品</span></a>
+								</li>
+								<li>
+									<a href="{ms:global.url/}/182/189/index.html"><span>联系我们</span></a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--地图部分-->
+		<script type="text/javascript">
+		var myChart = echarts.init(document.getElementById('map'));
+
+			function randomData() {
+				return Math.round(Math.random() * 1000);
+			}
+
+			option = {
+				
+				title: {
+					text: '',
+					subtext: '',
+					left: 'center'
+				},
+				tooltip: {
+					trigger: 'item'
+				},
+				visualMap: {
+					show:false,
+					min: 0,
+					max: 2500,
+					left: 'left',
+					top: 'bottom',
+					text: ['高', '低'],
+					calculable: true
+				},
+				series: [{
+					name: 'iphone',
+					type: 'map',
+					mapType: 'china',
+					roam: false,
+					label: {
+						normal: {
+							show: true
+						},
+						emphasis: {
+							show: true
+						}
+					},
+					data: [{
+						name: '北京',
+						value: randomData()
+					}, {
+						name: '天津',
+						value: randomData()
+					}, {
+						name: '上海',
+						value: randomData()
+					}, {
+						name: '重庆',
+						value: randomData()
+					}, {
+						name: '河北',
+						value: randomData()
+					}, {
+						name: '河南',
+						value: randomData()
+					}, {
+						name: '云南',
+						value: randomData()
+					}, {
+						name: '辽宁',
+						value: randomData()
+					}, {
+						name: '黑龙江',
+						value: randomData()
+					}, {
+						name: '湖南',
+						value: randomData()
+					}, {
+						name: '安徽',
+						value: randomData()
+					}, {
+						name: '山东',
+						value: randomData()
+					}, {
+						name: '新疆',
+						value: randomData()
+					}, {
+						name: '江苏',
+						value: randomData()
+					}, {
+						name: '浙江',
+						value: randomData()
+					}, {
+						name: '江西',
+						value: randomData()
+					}, {
+						name: '湖北',
+						value: randomData()
+					}, {
+						name: '广西',
+						value: randomData()
+					}, {
+						name: '甘肃',
+						value: randomData()
+					}, {
+						name: '山西',
+						value: randomData()
+					}, {
+						name: '内蒙古',
+						value: randomData()
+					}, {
+						name: '陕西',
+						value: randomData()
+					}, {
+						name: '吉林',
+						value: randomData()
+					}, {
+						name: '福建',
+						value: randomData()
+					}, {
+						name: '贵州',
+						value: randomData()
+					}, {
+						name: '广东',
+						value: randomData()
+					}, {
+						name: '青海',
+						value: randomData()
+					}, {
+						name: '西藏',
+						value: randomData()
+					}, {
+						name: '四川',
+						value: randomData()
+					}, {
+						name: '宁夏',
+						value: randomData()
+					}, {
+						name: '海南',
+						value: randomData()
+					}, {
+						name: '台湾',
+						value: randomData()
+					}, {
+						name: '香港',
+						value: randomData()
+					}, {
+						name: '澳门',
+						value: randomData()
+					}]
+				}]
+			};
+			// 使用刚指定的配置项和数据显示图表。
+			myChart.setOption(option);
+		</script>
+	</body>
+
+</html>
